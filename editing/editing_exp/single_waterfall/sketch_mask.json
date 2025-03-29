@@ -1,0 +1,9 @@
+{
+    "type": "flow",
+    "box_begin": [
+        100,
+        250
+    ],
+    "box_height": 350,
+    "box_width": 300
+}

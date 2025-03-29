@@ -1,0 +1,13 @@
+{
+    "type": "inter",
+    "box_begin": [
+        100,
+        100
+    ],
+    "box_end": [
+        150,
+        400
+    ],
+    "box_height": 200,
+    "box_width": 250
+}
