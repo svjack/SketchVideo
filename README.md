@@ -260,8 +260,8 @@ We propose SketchVideo, which aim to achieve sketch-based spatial and motion con
 
 
 ## 📝 Changelog
-- __[2025.03.29]__: 🔥🔥 Release code and model weights.
-- __[2025.03.28]__: Launch the project page and update the arXiv preprint.
+- __[2025.04.01]__: 🔥🔥 Release code and model weights.
+- __[2025.03.30]__: Launch the project page and update the arXiv preprint.
 <br>
 
 
