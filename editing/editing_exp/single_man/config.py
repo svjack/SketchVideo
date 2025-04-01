@@ -1,5 +1,11 @@
 root_dir = "./editing_exp/single_man"
 
+# Mask generation settings
+bounding_box_type = "flow"
+box_begin = [10, 200]
+box_height = 200
+box_width = 340
+
 # Input paths
 video_path = f"{root_dir}/man_editing.mp4"
 sketch_paths = [

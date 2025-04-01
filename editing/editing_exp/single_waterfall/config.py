@@ -1,4 +1,4 @@
-root_dir = "./editing_exp/single_waterfull"
+root_dir = "./editing_exp/single_waterfall"
 
 # Mask generation settings
 bounding_box_type = "flow"

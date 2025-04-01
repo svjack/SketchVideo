@@ -1,4 +1,11 @@
-root_dir = "/mnt/new/liufenglin/code/SketchVideo_ori/editing/results/editing_exp/two_boat"
+root_dir = "./editing_exp/two_boat"
+
+# Mask generation settings
+bounding_box_type = "inter"
+box_begin = [300, 60]
+box_end = [300, 500]
+box_height = 150
+box_width = 170
 
 # Input paths
 video_path = f"{root_dir}/ocean_editing.mp4"

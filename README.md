@@ -260,7 +260,6 @@ We propose SketchVideo, which aim to achieve sketch-based spatial and motion con
 
 
 ## 📝 Changelog
-- [ ] Add sketch-based generation and editing training code.
 - __[2025.03.29]__: 🔥🔥 Release code and model weights.
 - __[2025.03.28]__: Launch the project page and update the arXiv preprint.
 <br>
@@ -268,10 +267,10 @@ We propose SketchVideo, which aim to achieve sketch-based spatial and motion con
 
 ## 🧰 Models
 
-|Model|Resolution|GPU Mem. & Inference Time (H800, ddim 50steps)|Checkpoint|
+|Model|Resolution|GPU Mem. & Inference Time (A100, ddim 50steps)|Checkpoint|
 |:---------|:---------|:--------|:--------|
-|SketchGen|720x480| ~21G & 48s |[Hugging Face](https://huggingface.co/Doubiiu/ToonCrafter/blob/main/model.ckpt)|
-|SketchEdit|720x480| ~24G & 48s |[Hugging Face](https://huggingface.co/Doubiiu/ToonCrafter/blob/main/model.ckpt)|
+|SketchGen|720x480| ~21G & 95s |[Hugging Face](https://huggingface.co/Doubiiu/ToonCrafter/blob/main/model.ckpt)|
+|SketchEdit|720x480| ~23G & 230s |[Hugging Face](https://huggingface.co/Doubiiu/ToonCrafter/blob/main/model.ckpt)|
 
 Our method is built based on pretrained [CogVideo-2b](https://github.com/THUDM/CogVideo) model. We add an additional sketch conditional network for sketch-based generation and editing. 
 
@@ -289,7 +288,7 @@ conda create -n sketchvideo python=3.10
 conda activate sketchvideo
 pip install -r requirements.txt
 ```
-
+Notably, `diffusers==0.30.1` is required. 
 
 ## 💫 Inference
 ### 1. Sketch-based Video Generation
@@ -298,14 +297,14 @@ Download pretrained SketchGen network [[hugging face](https://huggingface.co/Dou
 
 Generate video based on single keyframe sketch. 
 ```bash
-  cd generation
-  sh scripts/test_sketch_gen_single.sh
+cd generation
+sh scripts/test_sketch_gen_single.sh
 ```
 
 Generate video based on two keyframe sketches. 
 ```bash
-  cd generation
-  sh scripts/test_sketch_gen_two.sh
+cd generation
+sh scripts/test_sketch_gen_two.sh
 ```
 
 ### 2. Sketch-based Video Editing
@@ -314,8 +313,8 @@ Download pretrained SketchEdit network [[hugging face](https://huggingface.co/Do
 
 Edit video based on keyframe sketches. 
 ```bash
-  cd editing
-  sh scripts/test_sketch_edit.sh
+cd editing
+sh scripts/test_sketch_edit.sh
 ```
 
 It contains the editing examples based on one or two keyframe sketches. 
