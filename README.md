@@ -4,7 +4,7 @@
 <div align="center">
 <img src='assets/logo.png' style="height:100px"></img>
 
-<!-- <a href='https://arxiv.org/abs/2405.17933'><img src='https://img.shields.io/badge/arXiv-2405.17933-b31b1b.svg'></a> &nbsp; -->
+<a href='https://arxiv.org/abs/2503.23284'><img src='https://img.shields.io/badge/arXiv-2405.17933-b31b1b.svg'></a> &nbsp;
 <a href='http://geometrylearning.com/SketchVideo/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp;
 <a href='https://www.youtube.com/watch?v=eo5DNiaGgiQ'><img src='https://img.shields.io/badge/Youtube-Video-b31b1b.svg'></a><br>
 
@@ -269,8 +269,8 @@ We propose SketchVideo, which aim to achieve sketch-based spatial and motion con
 
 |Model|Resolution|GPU Mem. & Inference Time (A100, ddim 50steps)|Checkpoint|
 |:---------|:---------|:--------|:--------|
-|SketchGen|720x480| ~21G & 95s |[Hugging Face](https://huggingface.co/Doubiiu/ToonCrafter/blob/main/model.ckpt)|
-|SketchEdit|720x480| ~23G & 230s |[Hugging Face](https://huggingface.co/Doubiiu/ToonCrafter/blob/main/model.ckpt)|
+|SketchGen|720x480| ~21G & 95s |[Hugging Face](https://huggingface.co/Okrin/SketchVideo/tree/main/sketchgen)|
+|SketchEdit|720x480| ~23G & 230s |[Hugging Face](https://huggingface.co/Okrin/SketchVideo/tree/main/sketchedit)|
 
 Our method is built based on pretrained [CogVideo-2b](https://github.com/THUDM/CogVideo) model. We add an additional sketch conditional network for sketch-based generation and editing. 
 
@@ -293,7 +293,7 @@ Notably, `diffusers==0.30.1` is required.
 ## 💫 Inference
 ### 1. Sketch-based Video Generation
 
-Download pretrained SketchGen network [[hugging face](https://huggingface.co/Doubiiu/ToonCrafter/blob/main/model.ckpt)] and pretrained CogVideo-2b [[hugging face](https://huggingface.co/THUDM/CogVideoX-2b)] video generation model. Then, modify the `--control_checkpoint_path` and `--cogvideo_checkpoint_path` in scripts to corresponding paths. 
+Download pretrained SketchGen network [[hugging face](https://huggingface.co/Okrin/SketchVideo/tree/main/sketchgen)] and pretrained CogVideo-2b [[hugging face](https://huggingface.co/THUDM/CogVideoX-2b)] video generation model. Then, modify the `--control_checkpoint_path` and `--cogvideo_checkpoint_path` in scripts to corresponding paths. 
 
 Generate video based on single keyframe sketch. 
 ```bash
@@ -309,7 +309,7 @@ sh scripts/test_sketch_gen_two.sh
 
 ### 2. Sketch-based Video Editing
 
-Download pretrained SketchEdit network [[hugging face](https://huggingface.co/Doubiiu/ToonCrafter/blob/main/model.ckpt)] and pretrained CogVideo-2b [[hugging face](https://huggingface.co/THUDM/CogVideoX-2b)] video generation model. Then, for each editing example, modify the `config.py` in `editing/editing_exp` folder. Change `controlnet_path` into SketchEdit weights path, and `vae_path, pipeline_path` into CogVideo weights path. 
+Download pretrained SketchEdit network [[hugging face](https://huggingface.co/Okrin/SketchVideo/tree/main/sketchedit)] and pretrained CogVideo-2b [[hugging face](https://huggingface.co/THUDM/CogVideoX-2b)] video generation model. Then, for each editing example, modify the `config.py` in `editing/editing_exp` folder. Change `controlnet_path` into SketchEdit weights path, and `vae_path, pipeline_path` into CogVideo weights path. 
 
 Edit video based on keyframe sketches. 
 ```bash
