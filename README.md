@@ -1,3 +1,16 @@
+```bash
+sudo apt-get update && sudo apt-get install cbm git-lfs ffmpeg
+
+conda create -n sketchvideo python=3.10
+conda activate sketchvideo
+pip install ipykernel  # 安装ipykernel
+python -m ipykernel install --user --name sketchvideo --display-name "sketchvideo"  # 注册Jupyter kernel
+
+git clone https://github.com/svjack/SketchVideo && cd SketchVideo
+pip install -r requirements.txt
+
+```
+
 ## ***SketchVideo: Sketch-based Video Generation and Editing***
 <!-- ![](./assets/logo_long.png#gh-light-mode-only){: width="50%"} -->
 <!-- ![](./assets/logo_long_dark.png#gh-dark-mode-only=100x20) -->
