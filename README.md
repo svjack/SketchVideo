@@ -11,6 +11,18 @@ pip install -r requirements.txt
 
 git clone https://huggingface.co/THUDM/CogVideoX-2b
 git clone https://huggingface.co/Okrin/SketchVideo
+
+cd generation
+
+python inference_ctrl_cogvideo.py \
+--text_path "./results/ex1/test_input/car.txt" \
+--image_paths "./results/ex1/test_input/car.png" \
+--output_dir "./results/ex1/test_output" \
+--controlnet_name "full" \
+--control_frame_index "6" \
+--control_checkpoint_path "Okrin/SketchVideo/sketchgen" \
+--cogvideo_checkpoint_path "THUDM/CogVideoX-2b" \
+--seed 5990 \
 ```
 
 ## ***SketchVideo: Sketch-based Video Generation and Editing***
