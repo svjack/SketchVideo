@@ -9,6 +9,8 @@ python -m ipykernel install --user --name sketchvideo --display-name "sketchvide
 git clone https://github.com/svjack/SketchVideo && cd SketchVideo
 pip install -r requirements.txt
 
+git clone https://huggingface.co/THUDM/CogVideoX-2b
+git clone https://huggingface.co/Okrin/SketchVideo
 ```
 
 ## ***SketchVideo: Sketch-based Video Generation and Editing***
