@@ -22,7 +22,7 @@ python inference_ctrl_cogvideo.py \
 --control_frame_index "6" \
 --control_checkpoint_path "../SketchVideo/sketchgen" \
 --cogvideo_checkpoint_path "../CogVideoX-2b" \
---seed 5990 \
+--seed 5990
 ```
 
 ## ***SketchVideo: Sketch-based Video Generation and Editing***
